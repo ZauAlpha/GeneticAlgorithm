@@ -71,6 +71,7 @@ fun main() {
            //print the top 5 best genom
             println("Best genoms: ${generations.last().take(5)}")
             println("--------------------------------------------------------------")
+            println("last generation size ${generations.last().size}")
             break
         }
 
