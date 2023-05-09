@@ -60,23 +60,21 @@ fun main() {
         val newGeneration = GenomMaker.newGeneration(parents,humans,map)
         newGeneration.sortBy { it.fitness }
         generations.add(newGeneration)
-        //if the number of population is the same as the previous generation, stop
 
-        /*if(parents.first() == newGeneration.first())
+
+        if(parents.first() == newGeneration.first())
             count ++
         else
             count=0
         if(count == 10) {
-            println("Generation ${i-9} Best genom: ${generations.last().first()}")
+
+           //print the top 5 best genom
+            println("Best genoms: ${generations.last().take(5)}")
             println("--------------------------------------------------------------")
-            println(map.timeInHoursAndMinutes(generations.last().first().time))
-            println(map.getVisitedCities(generations.last().first()))
             break
-        }*/
-        println("Generation ${i-9} Best genom: ${generations.last().first()}")
-        println("--------------------------------------------------------------")
-        println(map.timeInHoursAndMinutes(generations.last().first().time))
-        println(map.getVisitedCities(generations.last().first()))
+        }
+
+
     }
 
 

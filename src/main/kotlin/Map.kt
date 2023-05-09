@@ -80,7 +80,7 @@ class Map() {
                 return
             }
         }
-        if(!GenomMaker.containsNumbersZeroToEleven(genom.genom)){
+        if(!GenomMaker.containsAllCities(genom.genom)){
             genom.fitness = -1
             genom.time = time
             return

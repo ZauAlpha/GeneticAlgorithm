@@ -11,14 +11,14 @@ object GenomMaker {
             city = city.getRandomCity()
             genom.genom.add(city.id)
         }
-        while (!containsNumbersZeroToEleven(genom.genom)) {
+        while (!containsAllCities(genom.genom)) {
             city = city.getRandomCity()
             genom.genom.add(city.id)
         }
 
         return genom
     }
-//falta la mutación
+
     fun genom(parent1: Genom, parent2: Genom): Pair<Genom, Genom> {
         val child1 = Genom()
         val child2 = Genom()
@@ -36,7 +36,7 @@ object GenomMaker {
         return Pair(child1, child2)
     }
 
-    fun containsNumbersZeroToEleven(numbers: List<Int>): Boolean {
+    fun containsAllCities(numbers: List<Int>): Boolean {
         val presenceList = MutableList(12) { 0 }
 
         for (number in numbers) {
